@@ -12,5 +12,7 @@ struct zaniaFilterExtensionMainView: View {
     
     var body: some View {
         ParameterSlider(param: parameterTree.global.gain)
+        ParameterSlider(param: parameterTree.global.attack)
+        ArcKnobView(param: parameterTree.global.gain)
     }
 }

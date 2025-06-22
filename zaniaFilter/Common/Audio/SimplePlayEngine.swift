@@ -6,7 +6,7 @@
 //
 
 import Foundation
-public import CoreAudioKit
+internal import CoreAudioKit
 import AVFoundation
 @preconcurrency import AVFAudio
 

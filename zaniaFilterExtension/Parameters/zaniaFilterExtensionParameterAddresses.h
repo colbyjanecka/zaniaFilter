@@ -10,5 +10,7 @@
 #include <AudioToolbox/AUParameters.h>
 
 typedef NS_ENUM(AUParameterAddress, zaniaFilterExtensionParameterAddress) {
-    gain = 0
+    gain = 0,
+    attack
 };
+

@@ -17,7 +17,15 @@ let zaniaFilterExtensionParameterSpecs = ParameterTreeSpec {
             units: .linearGain,
             valueRange: 0.0...1.0,
             defaultValue: 0.25
-        )
+        );
+    ParameterSpec(
+        address: .attack,
+        identifier: "attack",
+        name: "Attack",
+        units: .milliseconds,
+        valueRange: 0.0...1000.0,
+        defaultValue: 100.0
+    )
     }
 }
 

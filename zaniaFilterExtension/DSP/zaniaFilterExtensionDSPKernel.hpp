@@ -43,6 +43,9 @@ public:
                 mGain = value;
                 break;
                 // Add a case for each parameter in zaniaFilterExtensionParameterAddresses.h
+            case zaniaFilterExtensionParameterAddress:: attack:
+                mAttack = value;
+                break;        
         }
     }
     
@@ -52,6 +55,8 @@ public:
         switch (address) {
             case zaniaFilterExtensionParameterAddress::gain:
                 return (AUValue)mGain;
+            case zaniaFilterExtensionParameterAddress::attack:
+                return (AUValue) mAttack;
                 
             default: return 0.f;
         }
@@ -136,6 +141,7 @@ public:
     
     double mSampleRate = 44100.0;
     double mGain = 1.0;
+    double mAttack = 1.0;
     bool mBypassed = false;
     AUAudioFrameCount mMaxFramesToRender = 1024;
 };
