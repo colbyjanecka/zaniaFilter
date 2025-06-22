@@ -7,41 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2758CCBF2E0874BA0092C2D7 /* zaniaFilterExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2758CCBE2E0874BA0092C2D7 /* zaniaFilterExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		27B4860D2E08A00D008C0B81 /* zaniaFilterExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 27B4860C2E08A00D008C0B81 /* zaniaFilterExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2758CCA92E0874BA0092C2D7 /* PBXContainerItemProxy */ = {
+		27B485F72E08A00C008C0B81 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 2758CC7A2E0874B70092C2D7 /* Project object */;
+			containerPortal = 27B485C82E08A00A008C0B81 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 2758CC812E0874B70092C2D7;
+			remoteGlobalIDString = 27B485CF2E08A00A008C0B81;
 			remoteInfo = zaniaFilter;
 		};
-		2758CCB32E0874BA0092C2D7 /* PBXContainerItemProxy */ = {
+		27B486012E08A00D008C0B81 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 2758CC7A2E0874B70092C2D7 /* Project object */;
+			containerPortal = 27B485C82E08A00A008C0B81 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 2758CC812E0874B70092C2D7;
+			remoteGlobalIDString = 27B485CF2E08A00A008C0B81;
 			remoteInfo = zaniaFilter;
 		};
-		2758CCC02E0874BA0092C2D7 /* PBXContainerItemProxy */ = {
+		27B4860E2E08A00D008C0B81 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 2758CC7A2E0874B70092C2D7 /* Project object */;
+			containerPortal = 27B485C82E08A00A008C0B81 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 2758CCBD2E0874BA0092C2D7;
+			remoteGlobalIDString = 27B4860B2E08A00D008C0B81;
 			remoteInfo = zaniaFilterExtension;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		2758CCF02E0874BA0092C2D7 /* Embed Foundation Extensions */ = {
+		27B4863E2E08A00D008C0B81 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				2758CCBF2E0874BA0092C2D7 /* zaniaFilterExtension.appex in Embed Foundation Extensions */,
+				27B4860D2E08A00D008C0B81 /* zaniaFilterExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -49,26 +49,26 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2758CC822E0874B70092C2D7 /* zaniaFilter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zaniaFilter.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2758CCA82E0874BA0092C2D7 /* zaniaFilterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = zaniaFilterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2758CCB22E0874BA0092C2D7 /* zaniaFilterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = zaniaFilterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2758CCBE2E0874BA0092C2D7 /* zaniaFilterExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = zaniaFilterExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		27B485D02E08A00A008C0B81 /* zaniaFilter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zaniaFilter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		27B485F62E08A00C008C0B81 /* zaniaFilterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = zaniaFilterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		27B486002E08A00D008C0B81 /* zaniaFilterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = zaniaFilterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		27B4860C2E08A00D008C0B81 /* zaniaFilterExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = zaniaFilterExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		2758CCE92E0874BA0092C2D7 /* Exceptions for "zaniaFilterExtension" folder in "zaniaFilterExtension" target */ = {
+		27B486372E08A00D008C0B81 /* Exceptions for "zaniaFilterExtension" folder in "zaniaFilterExtension" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
-			target = 2758CCBD2E0874BA0092C2D7 /* zaniaFilterExtension */;
+			target = 27B4860B2E08A00D008C0B81 /* zaniaFilterExtension */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
-		2758CCED2E0874BA0092C2D7 /* Exceptions for "zaniaFilterExtension" folder in "Copy Bundle Resources" phase from "zaniaFilterExtension" target */ = {
+		27B4863B2E08A00D008C0B81 /* Exceptions for "zaniaFilterExtension" folder in "Copy Bundle Resources" phase from "zaniaFilterExtension" target */ = {
 			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
-			buildPhase = 2758CCBC2E0874BA0092C2D7 /* Resources */;
+			buildPhase = 27B4860A2E08A00D008C0B81 /* Resources */;
 			membershipExceptions = (
 				Common/DSP/zaniaFilterExtensionAUProcessHelper.hpp,
 				Common/DSP/zaniaFilterExtensionBufferedAudioBus.hpp,
@@ -78,26 +78,26 @@
 /* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		2758CC842E0874B70092C2D7 /* zaniaFilter */ = {
+		27B485D22E08A00A008C0B81 /* zaniaFilter */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = zaniaFilter;
 			sourceTree = "<group>";
 		};
-		2758CCAB2E0874BA0092C2D7 /* zaniaFilterTests */ = {
+		27B485F92E08A00C008C0B81 /* zaniaFilterTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = zaniaFilterTests;
 			sourceTree = "<group>";
 		};
-		2758CCB52E0874BA0092C2D7 /* zaniaFilterUITests */ = {
+		27B486032E08A00D008C0B81 /* zaniaFilterUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = zaniaFilterUITests;
 			sourceTree = "<group>";
 		};
-		2758CCC22E0874BA0092C2D7 /* zaniaFilterExtension */ = {
+		27B486102E08A00D008C0B81 /* zaniaFilterExtension */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				2758CCE92E0874BA0092C2D7 /* Exceptions for "zaniaFilterExtension" folder in "zaniaFilterExtension" target */,
-				2758CCED2E0874BA0092C2D7 /* Exceptions for "zaniaFilterExtension" folder in "Copy Bundle Resources" phase from "zaniaFilterExtension" target */,
+				27B486372E08A00D008C0B81 /* Exceptions for "zaniaFilterExtension" folder in "zaniaFilterExtension" target */,
+				27B4863B2E08A00D008C0B81 /* Exceptions for "zaniaFilterExtension" folder in "Copy Bundle Resources" phase from "zaniaFilterExtension" target */,
 			);
 			path = zaniaFilterExtension;
 			sourceTree = "<group>";
@@ -105,28 +105,28 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2758CC7F2E0874B70092C2D7 /* Frameworks */ = {
+		27B485CD2E08A00A008C0B81 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2758CCA52E0874BA0092C2D7 /* Frameworks */ = {
+		27B485F32E08A00C008C0B81 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2758CCAF2E0874BA0092C2D7 /* Frameworks */ = {
+		27B485FD2E08A00D008C0B81 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2758CCBB2E0874BA0092C2D7 /* Frameworks */ = {
+		27B486092E08A00D008C0B81 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -136,24 +136,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2758CC792E0874B70092C2D7 = {
+		27B485C72E08A00A008C0B81 = {
 			isa = PBXGroup;
 			children = (
-				2758CC842E0874B70092C2D7 /* zaniaFilter */,
-				2758CCAB2E0874BA0092C2D7 /* zaniaFilterTests */,
-				2758CCB52E0874BA0092C2D7 /* zaniaFilterUITests */,
-				2758CCC22E0874BA0092C2D7 /* zaniaFilterExtension */,
-				2758CC832E0874B70092C2D7 /* Products */,
+				27B485D22E08A00A008C0B81 /* zaniaFilter */,
+				27B485F92E08A00C008C0B81 /* zaniaFilterTests */,
+				27B486032E08A00D008C0B81 /* zaniaFilterUITests */,
+				27B486102E08A00D008C0B81 /* zaniaFilterExtension */,
+				27B485D12E08A00A008C0B81 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		2758CC832E0874B70092C2D7 /* Products */ = {
+		27B485D12E08A00A008C0B81 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2758CC822E0874B70092C2D7 /* zaniaFilter.app */,
-				2758CCA82E0874BA0092C2D7 /* zaniaFilterTests.xctest */,
-				2758CCB22E0874BA0092C2D7 /* zaniaFilterUITests.xctest */,
-				2758CCBE2E0874BA0092C2D7 /* zaniaFilterExtension.appex */,
+				27B485D02E08A00A008C0B81 /* zaniaFilter.app */,
+				27B485F62E08A00C008C0B81 /* zaniaFilterTests.xctest */,
+				27B486002E08A00D008C0B81 /* zaniaFilterUITests.xctest */,
+				27B4860C2E08A00D008C0B81 /* zaniaFilterExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -161,169 +161,169 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2758CC812E0874B70092C2D7 /* zaniaFilter */ = {
+		27B485CF2E08A00A008C0B81 /* zaniaFilter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2758CCF12E0874BA0092C2D7 /* Build configuration list for PBXNativeTarget "zaniaFilter" */;
+			buildConfigurationList = 27B4863F2E08A00D008C0B81 /* Build configuration list for PBXNativeTarget "zaniaFilter" */;
 			buildPhases = (
-				2758CC7E2E0874B70092C2D7 /* Sources */,
-				2758CC7F2E0874B70092C2D7 /* Frameworks */,
-				2758CC802E0874B70092C2D7 /* Resources */,
-				2758CCF02E0874BA0092C2D7 /* Embed Foundation Extensions */,
+				27B485CC2E08A00A008C0B81 /* Sources */,
+				27B485CD2E08A00A008C0B81 /* Frameworks */,
+				27B485CE2E08A00A008C0B81 /* Resources */,
+				27B4863E2E08A00D008C0B81 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2758CCC12E0874BA0092C2D7 /* PBXTargetDependency */,
+				27B4860F2E08A00D008C0B81 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				2758CC842E0874B70092C2D7 /* zaniaFilter */,
+				27B485D22E08A00A008C0B81 /* zaniaFilter */,
 			);
 			name = zaniaFilter;
 			packageProductDependencies = (
 			);
 			productName = zaniaFilter;
-			productReference = 2758CC822E0874B70092C2D7 /* zaniaFilter.app */;
+			productReference = 27B485D02E08A00A008C0B81 /* zaniaFilter.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2758CCA72E0874BA0092C2D7 /* zaniaFilterTests */ = {
+		27B485F52E08A00C008C0B81 /* zaniaFilterTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2758CCF42E0874BA0092C2D7 /* Build configuration list for PBXNativeTarget "zaniaFilterTests" */;
+			buildConfigurationList = 27B486422E08A00D008C0B81 /* Build configuration list for PBXNativeTarget "zaniaFilterTests" */;
 			buildPhases = (
-				2758CCA42E0874BA0092C2D7 /* Sources */,
-				2758CCA52E0874BA0092C2D7 /* Frameworks */,
-				2758CCA62E0874BA0092C2D7 /* Resources */,
+				27B485F22E08A00C008C0B81 /* Sources */,
+				27B485F32E08A00C008C0B81 /* Frameworks */,
+				27B485F42E08A00C008C0B81 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2758CCAA2E0874BA0092C2D7 /* PBXTargetDependency */,
+				27B485F82E08A00C008C0B81 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				2758CCAB2E0874BA0092C2D7 /* zaniaFilterTests */,
+				27B485F92E08A00C008C0B81 /* zaniaFilterTests */,
 			);
 			name = zaniaFilterTests;
 			packageProductDependencies = (
 			);
 			productName = zaniaFilterTests;
-			productReference = 2758CCA82E0874BA0092C2D7 /* zaniaFilterTests.xctest */;
+			productReference = 27B485F62E08A00C008C0B81 /* zaniaFilterTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		2758CCB12E0874BA0092C2D7 /* zaniaFilterUITests */ = {
+		27B485FF2E08A00D008C0B81 /* zaniaFilterUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2758CCF72E0874BA0092C2D7 /* Build configuration list for PBXNativeTarget "zaniaFilterUITests" */;
+			buildConfigurationList = 27B486452E08A00D008C0B81 /* Build configuration list for PBXNativeTarget "zaniaFilterUITests" */;
 			buildPhases = (
-				2758CCAE2E0874BA0092C2D7 /* Sources */,
-				2758CCAF2E0874BA0092C2D7 /* Frameworks */,
-				2758CCB02E0874BA0092C2D7 /* Resources */,
+				27B485FC2E08A00D008C0B81 /* Sources */,
+				27B485FD2E08A00D008C0B81 /* Frameworks */,
+				27B485FE2E08A00D008C0B81 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2758CCB42E0874BA0092C2D7 /* PBXTargetDependency */,
+				27B486022E08A00D008C0B81 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				2758CCB52E0874BA0092C2D7 /* zaniaFilterUITests */,
+				27B486032E08A00D008C0B81 /* zaniaFilterUITests */,
 			);
 			name = zaniaFilterUITests;
 			packageProductDependencies = (
 			);
 			productName = zaniaFilterUITests;
-			productReference = 2758CCB22E0874BA0092C2D7 /* zaniaFilterUITests.xctest */;
+			productReference = 27B486002E08A00D008C0B81 /* zaniaFilterUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		2758CCBD2E0874BA0092C2D7 /* zaniaFilterExtension */ = {
+		27B4860B2E08A00D008C0B81 /* zaniaFilterExtension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2758CCEA2E0874BA0092C2D7 /* Build configuration list for PBXNativeTarget "zaniaFilterExtension" */;
+			buildConfigurationList = 27B486382E08A00D008C0B81 /* Build configuration list for PBXNativeTarget "zaniaFilterExtension" */;
 			buildPhases = (
-				2758CCBA2E0874BA0092C2D7 /* Sources */,
-				2758CCBB2E0874BA0092C2D7 /* Frameworks */,
-				2758CCBC2E0874BA0092C2D7 /* Resources */,
+				27B486082E08A00D008C0B81 /* Sources */,
+				27B486092E08A00D008C0B81 /* Frameworks */,
+				27B4860A2E08A00D008C0B81 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				2758CCC22E0874BA0092C2D7 /* zaniaFilterExtension */,
+				27B486102E08A00D008C0B81 /* zaniaFilterExtension */,
 			);
 			name = zaniaFilterExtension;
 			packageProductDependencies = (
 			);
 			productName = zaniaFilterExtension;
-			productReference = 2758CCBE2E0874BA0092C2D7 /* zaniaFilterExtension.appex */;
+			productReference = 27B4860C2E08A00D008C0B81 /* zaniaFilterExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		2758CC7A2E0874B70092C2D7 /* Project object */ = {
+		27B485C82E08A00A008C0B81 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1630;
 				LastUpgradeCheck = 1630;
 				TargetAttributes = {
-					2758CC812E0874B70092C2D7 = {
+					27B485CF2E08A00A008C0B81 = {
 						CreatedOnToolsVersion = 16.3;
 					};
-					2758CCA72E0874BA0092C2D7 = {
+					27B485F52E08A00C008C0B81 = {
 						CreatedOnToolsVersion = 16.3;
-						TestTargetID = 2758CC812E0874B70092C2D7;
+						TestTargetID = 27B485CF2E08A00A008C0B81;
 					};
-					2758CCB12E0874BA0092C2D7 = {
+					27B485FF2E08A00D008C0B81 = {
 						CreatedOnToolsVersion = 16.3;
-						TestTargetID = 2758CC812E0874B70092C2D7;
+						TestTargetID = 27B485CF2E08A00A008C0B81;
 					};
-					2758CCBD2E0874BA0092C2D7 = {
+					27B4860B2E08A00D008C0B81 = {
 						CreatedOnToolsVersion = 16.3;
 					};
 				};
 			};
-			buildConfigurationList = 2758CC7D2E0874B70092C2D7 /* Build configuration list for PBXProject "zaniaFilter" */;
+			buildConfigurationList = 27B485CB2E08A00A008C0B81 /* Build configuration list for PBXProject "zaniaFilter" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 2758CC792E0874B70092C2D7;
+			mainGroup = 27B485C72E08A00A008C0B81;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 2758CC832E0874B70092C2D7 /* Products */;
+			productRefGroup = 27B485D12E08A00A008C0B81 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2758CC812E0874B70092C2D7 /* zaniaFilter */,
-				2758CCA72E0874BA0092C2D7 /* zaniaFilterTests */,
-				2758CCB12E0874BA0092C2D7 /* zaniaFilterUITests */,
-				2758CCBD2E0874BA0092C2D7 /* zaniaFilterExtension */,
+				27B485CF2E08A00A008C0B81 /* zaniaFilter */,
+				27B485F52E08A00C008C0B81 /* zaniaFilterTests */,
+				27B485FF2E08A00D008C0B81 /* zaniaFilterUITests */,
+				27B4860B2E08A00D008C0B81 /* zaniaFilterExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2758CC802E0874B70092C2D7 /* Resources */ = {
+		27B485CE2E08A00A008C0B81 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2758CCA62E0874BA0092C2D7 /* Resources */ = {
+		27B485F42E08A00C008C0B81 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2758CCB02E0874BA0092C2D7 /* Resources */ = {
+		27B485FE2E08A00D008C0B81 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2758CCBC2E0874BA0092C2D7 /* Resources */ = {
+		27B4860A2E08A00D008C0B81 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -333,28 +333,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2758CC7E2E0874B70092C2D7 /* Sources */ = {
+		27B485CC2E08A00A008C0B81 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2758CCA42E0874BA0092C2D7 /* Sources */ = {
+		27B485F22E08A00C008C0B81 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2758CCAE2E0874BA0092C2D7 /* Sources */ = {
+		27B485FC2E08A00D008C0B81 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2758CCBA2E0874BA0092C2D7 /* Sources */ = {
+		27B486082E08A00D008C0B81 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -364,33 +364,33 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2758CCAA2E0874BA0092C2D7 /* PBXTargetDependency */ = {
+		27B485F82E08A00C008C0B81 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2758CC812E0874B70092C2D7 /* zaniaFilter */;
-			targetProxy = 2758CCA92E0874BA0092C2D7 /* PBXContainerItemProxy */;
+			target = 27B485CF2E08A00A008C0B81 /* zaniaFilter */;
+			targetProxy = 27B485F72E08A00C008C0B81 /* PBXContainerItemProxy */;
 		};
-		2758CCB42E0874BA0092C2D7 /* PBXTargetDependency */ = {
+		27B486022E08A00D008C0B81 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2758CC812E0874B70092C2D7 /* zaniaFilter */;
-			targetProxy = 2758CCB32E0874BA0092C2D7 /* PBXContainerItemProxy */;
+			target = 27B485CF2E08A00A008C0B81 /* zaniaFilter */;
+			targetProxy = 27B486012E08A00D008C0B81 /* PBXContainerItemProxy */;
 		};
-		2758CCC12E0874BA0092C2D7 /* PBXTargetDependency */ = {
+		27B4860F2E08A00D008C0B81 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2758CCBD2E0874BA0092C2D7 /* zaniaFilterExtension */;
-			targetProxy = 2758CCC02E0874BA0092C2D7 /* PBXContainerItemProxy */;
+			target = 27B4860B2E08A00D008C0B81 /* zaniaFilterExtension */;
+			targetProxy = 27B4860E2E08A00D008C0B81 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		2758CCEB2E0874BA0092C2D7 /* Debug */ = {
+		27B486392E08A00D008C0B81 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
 				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				ENABLE_APP_SANDBOX = YES;
-				ENABLE_USER_SELECTED_FILES = readonly;
+				DEVELOPMENT_TEAM = 3H9X8H3X73;
+				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = zaniaFilterExtension/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = zaniaFilterExtension;
@@ -422,15 +422,15 @@
 			};
 			name = Debug;
 		};
-		2758CCEC2E0874BA0092C2D7 /* Release */ = {
+		27B4863A2E08A00D008C0B81 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
 				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				ENABLE_APP_SANDBOX = YES;
-				ENABLE_USER_SELECTED_FILES = readonly;
+				DEVELOPMENT_TEAM = 3H9X8H3X73;
+				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = zaniaFilterExtension/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = zaniaFilterExtension;
@@ -462,7 +462,7 @@
 			};
 			name = Release;
 		};
-		2758CCEE2E0874BA0092C2D7 /* Debug */ = {
+		27B4863C2E08A00D008C0B81 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -497,6 +497,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 3H9X8H3X73;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -523,7 +524,7 @@
 			};
 			name = Debug;
 		};
-		2758CCEF2E0874BA0092C2D7 /* Release */ = {
+		27B4863D2E08A00D008C0B81 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -558,6 +559,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 3H9X8H3X73;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -576,20 +578,21 @@
 			};
 			name = Release;
 		};
-		2758CCF22E0874BA0092C2D7 /* Debug */ = {
+		27B486402E08A00D008C0B81 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = zaniaFilter/zaniaFilter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				ENABLE_APP_SANDBOX = YES;
+				DEVELOPMENT_TEAM = 3H9X8H3X73;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = zaniaFilter;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -623,20 +626,21 @@
 			};
 			name = Debug;
 		};
-		2758CCF32E0874BA0092C2D7 /* Release */ = {
+		27B486412E08A00D008C0B81 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = zaniaFilter/zaniaFilter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				ENABLE_APP_SANDBOX = YES;
+				DEVELOPMENT_TEAM = 3H9X8H3X73;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = zaniaFilter;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -670,12 +674,13 @@
 			};
 			name = Release;
 		};
-		2758CCF52E0874BA0092C2D7 /* Debug */ = {
+		27B486432E08A00D008C0B81 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3H9X8H3X73;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
 				MACOSX_DEPLOYMENT_TARGET = 15.4;
@@ -692,12 +697,13 @@
 			};
 			name = Debug;
 		};
-		2758CCF62E0874BA0092C2D7 /* Release */ = {
+		27B486442E08A00D008C0B81 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3H9X8H3X73;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
 				MACOSX_DEPLOYMENT_TARGET = 15.4;
@@ -714,11 +720,12 @@
 			};
 			name = Release;
 		};
-		2758CCF82E0874BA0092C2D7 /* Debug */ = {
+		27B486462E08A00D008C0B81 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3H9X8H3X73;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
 				MACOSX_DEPLOYMENT_TARGET = 15.4;
@@ -735,11 +742,12 @@
 			};
 			name = Debug;
 		};
-		2758CCF92E0874BA0092C2D7 /* Release */ = {
+		27B486472E08A00D008C0B81 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3H9X8H3X73;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
 				MACOSX_DEPLOYMENT_TARGET = 15.4;
@@ -759,52 +767,52 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2758CC7D2E0874B70092C2D7 /* Build configuration list for PBXProject "zaniaFilter" */ = {
+		27B485CB2E08A00A008C0B81 /* Build configuration list for PBXProject "zaniaFilter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2758CCEE2E0874BA0092C2D7 /* Debug */,
-				2758CCEF2E0874BA0092C2D7 /* Release */,
+				27B4863C2E08A00D008C0B81 /* Debug */,
+				27B4863D2E08A00D008C0B81 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2758CCEA2E0874BA0092C2D7 /* Build configuration list for PBXNativeTarget "zaniaFilterExtension" */ = {
+		27B486382E08A00D008C0B81 /* Build configuration list for PBXNativeTarget "zaniaFilterExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2758CCEB2E0874BA0092C2D7 /* Debug */,
-				2758CCEC2E0874BA0092C2D7 /* Release */,
+				27B486392E08A00D008C0B81 /* Debug */,
+				27B4863A2E08A00D008C0B81 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2758CCF12E0874BA0092C2D7 /* Build configuration list for PBXNativeTarget "zaniaFilter" */ = {
+		27B4863F2E08A00D008C0B81 /* Build configuration list for PBXNativeTarget "zaniaFilter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2758CCF22E0874BA0092C2D7 /* Debug */,
-				2758CCF32E0874BA0092C2D7 /* Release */,
+				27B486402E08A00D008C0B81 /* Debug */,
+				27B486412E08A00D008C0B81 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2758CCF42E0874BA0092C2D7 /* Build configuration list for PBXNativeTarget "zaniaFilterTests" */ = {
+		27B486422E08A00D008C0B81 /* Build configuration list for PBXNativeTarget "zaniaFilterTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2758CCF52E0874BA0092C2D7 /* Debug */,
-				2758CCF62E0874BA0092C2D7 /* Release */,
+				27B486432E08A00D008C0B81 /* Debug */,
+				27B486442E08A00D008C0B81 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2758CCF72E0874BA0092C2D7 /* Build configuration list for PBXNativeTarget "zaniaFilterUITests" */ = {
+		27B486452E08A00D008C0B81 /* Build configuration list for PBXNativeTarget "zaniaFilterUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2758CCF82E0874BA0092C2D7 /* Debug */,
-				2758CCF92E0874BA0092C2D7 /* Release */,
+				27B486462E08A00D008C0B81 /* Debug */,
+				27B486472E08A00D008C0B81 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 2758CC7A2E0874B70092C2D7 /* Project object */;
+	rootObject = 27B485C82E08A00A008C0B81 /* Project object */;
 }

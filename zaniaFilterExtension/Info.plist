@@ -14,9 +14,9 @@
 					<key>factoryFunction</key>
 					<string>$(PRODUCT_MODULE_NAME).AudioUnitViewController</string>
 					<key>manufacturer</key>
-					<string>mnia</string>
+					<string>MNIA</string>
 					<key>name</key>
-					<string>Mania: zaniaFilterExtension</string>
+					<string>mania: zaniaFilterExtension</string>
 					<key>sandboxSafe</key>
 					<true/>
 					<key>subtype</key>
