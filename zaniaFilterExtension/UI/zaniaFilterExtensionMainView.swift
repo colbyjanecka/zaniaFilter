@@ -11,8 +11,12 @@ struct zaniaFilterExtensionMainView: View {
     var parameterTree: ObservableAUParameterGroup
     
     var body: some View {
-        ParameterSlider(param: parameterTree.global.gain)
-        ParameterSlider(param: parameterTree.global.attack)
-        ArcKnobView(param: parameterTree.global.gain)
+        VStack(alignment: .center){
+            HStack{
+                ArcKnobView(param: parameterTree.global.gain)
+                ArcKnobView(param: parameterTree.global.pan)
+            }
+            
+        }
     }
 }

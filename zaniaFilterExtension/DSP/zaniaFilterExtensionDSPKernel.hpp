@@ -11,6 +11,7 @@
 #import <algorithm>
 #import <vector>
 #import <span>
+#include <math.h>
 
 #import "zaniaFilterExtensionParameterAddresses.h"
 
@@ -42,10 +43,15 @@ public:
             case zaniaFilterExtensionParameterAddress::gain:
                 mGain = value;
                 break;
-                // Add a case for each parameter in zaniaFilterExtensionParameterAddresses.h
             case zaniaFilterExtensionParameterAddress:: attack:
                 mAttack = value;
-                break;        
+                break;
+            case zaniaFilterExtensionParameterAddress:: pan:
+                mPan = value;
+                break;
+            case zaniaFilterExtensionParameterAddress:: temp:
+                mTemp = value;
+                break;
         }
     }
     
@@ -57,6 +63,10 @@ public:
                 return (AUValue)mGain;
             case zaniaFilterExtensionParameterAddress::attack:
                 return (AUValue) mAttack;
+            case zaniaFilterExtensionParameterAddress::pan:
+                return (AUValue) mPan;
+            case zaniaFilterExtensionParameterAddress::temp:
+                return (AUValue) mTemp;
                 
             default: return 0.f;
         }
@@ -114,8 +124,13 @@ public:
         for (UInt32 channel = 0; channel < inputBuffers.size(); ++channel) {
             for (UInt32 frameIndex = 0; frameIndex < frameCount; ++frameIndex) {
                 
+                // PAN Algorithm: dead center has both channels at -3dB
+                double panMap = ((mPan + 50)/100*(M_PI/2));
+                if(channel == 1){ panMap = sin(panMap);
+                } else { panMap = cos(panMap); }
+                
                 // Do your sample by sample dsp here...
-                outputBuffers[channel][frameIndex] = inputBuffers[channel][frameIndex] * mGain;
+                outputBuffers[channel][frameIndex] = inputBuffers[channel][frameIndex] * mGain * panMap;
             }
         }
     }
@@ -142,6 +157,8 @@ public:
     double mSampleRate = 44100.0;
     double mGain = 1.0;
     double mAttack = 1.0;
+    double mPan = 0;
+    double mTemp = 0;
     bool mBypassed = false;
     AUAudioFrameCount mMaxFramesToRender = 1024;
 };

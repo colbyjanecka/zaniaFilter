@@ -18,14 +18,30 @@ let zaniaFilterExtensionParameterSpecs = ParameterTreeSpec {
             valueRange: 0.0...1.0,
             defaultValue: 0.25
         );
-    ParameterSpec(
-        address: .attack,
-        identifier: "attack",
-        name: "Attack",
-        units: .milliseconds,
-        valueRange: 0.0...1000.0,
-        defaultValue: 100.0
-    )
+        ParameterSpec(
+            address: .attack,
+            identifier: "attack",
+            name: "Attack",
+            units: .milliseconds,
+            valueRange: 0.0...1000.0,
+            defaultValue: 100.0
+        );
+        ParameterSpec(
+            address: .pan,
+            identifier: "pan",
+            name: "Pan",
+            units: .linearGain,
+            valueRange: -50...50,
+            defaultValue: 0
+        );
+        ParameterSpec(
+            address: .temp,
+            identifier: "temp",
+            name: "Temp",
+            units: .linearGain,
+            valueRange: 0.0...5.0,
+            defaultValue: 0
+        )
     }
 }
 
