@@ -15,8 +15,8 @@ struct ArcKnobView: View {
         GeometryReader { proxy in
             VStack(alignment: .leading, spacing: 40) {
                     ArcKnob(param.displayName, value: $param.value, range: param.min...param.max, origin: param.value)
-                        .backgroundColor(.yellow)
-                        .foregroundColor(.blue)
+                        .backgroundColor(.accent)
+                        .foregroundColor(.main)
             }
         }
         .padding()
