@@ -130,7 +130,7 @@ public:
                 } else { panMap = cos(panMap); }
                 
                 // Do your sample by sample dsp here...
-                outputBuffers[channel][frameIndex] = inputBuffers[channel][frameIndex] * mGain * panMap;
+                outputBuffers[channel][frameIndex] = inputBuffers[channel][frameIndex] * mGain/100 * panMap;
             }
         }
     }
@@ -155,7 +155,7 @@ public:
     AUHostMusicalContextBlock mMusicalContextBlock;
     
     double mSampleRate = 44100.0;
-    double mGain = 1.0;
+    double mGain = 25;
     double mAttack = 1.0;
     double mPan = 0;
     double mTemp = 0;
