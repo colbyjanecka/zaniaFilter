@@ -8,10 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		27B4860D2E08A00D008C0B81 /* zaniaFilterExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 27B4860C2E08A00D008C0B81 /* zaniaFilterExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		27B4864F2E08B2FD008C0B81 /* Knob-iOS in Frameworks */ = {isa = PBXBuildFile; productRef = 27B4864E2E08B2FD008C0B81 /* Knob-iOS */; };
-		27B486512E08B2FD008C0B81 /* Knob-macOS in Frameworks */ = {isa = PBXBuildFile; productRef = 27B486502E08B2FD008C0B81 /* Knob-macOS */; };
-		27B486532E08B326008C0B81 /* Knob-iOS in Frameworks */ = {isa = PBXBuildFile; productRef = 27B486522E08B326008C0B81 /* Knob-iOS */; };
-		27B486552E08B326008C0B81 /* Knob-macOS in Frameworks */ = {isa = PBXBuildFile; productRef = 27B486542E08B326008C0B81 /* Knob-macOS */; };
 		27B4865A2E08B64C008C0B81 /* Controls in Frameworks */ = {isa = PBXBuildFile; productRef = 27B486592E08B64C008C0B81 /* Controls */; };
 /* End PBXBuildFile section */
 
@@ -58,7 +54,6 @@
 		27B485F62E08A00C008C0B81 /* zaniaFilterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = zaniaFilterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B486002E08A00D008C0B81 /* zaniaFilterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = zaniaFilterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B4860C2E08A00D008C0B81 /* zaniaFilterExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = zaniaFilterExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		27B4864C2E08AEE8008C0B81 /* Knob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Knob.swift; path = "libraries/Knob-iOS/Knob.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -115,8 +110,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27B486512E08B2FD008C0B81 /* Knob-macOS in Frameworks */,
-				27B4864F2E08B2FD008C0B81 /* Knob-iOS in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,9 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27B486552E08B326008C0B81 /* Knob-macOS in Frameworks */,
 				27B4865A2E08B64C008C0B81 /* Controls in Frameworks */,
-				27B486532E08B326008C0B81 /* Knob-iOS in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,7 +145,6 @@
 				27B485F92E08A00C008C0B81 /* zaniaFilterTests */,
 				27B486032E08A00D008C0B81 /* zaniaFilterUITests */,
 				27B486102E08A00D008C0B81 /* zaniaFilterExtension */,
-				27B4864B2E08AEE8008C0B81 /* Frameworks */,
 				27B485D12E08A00A008C0B81 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -168,14 +158,6 @@
 				27B4860C2E08A00D008C0B81 /* zaniaFilterExtension.appex */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		27B4864B2E08AEE8008C0B81 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				27B4864C2E08AEE8008C0B81 /* Knob.swift */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,8 +182,6 @@
 			);
 			name = zaniaFilter;
 			packageProductDependencies = (
-				27B4864E2E08B2FD008C0B81 /* Knob-iOS */,
-				27B486502E08B2FD008C0B81 /* Knob-macOS */,
 			);
 			productName = zaniaFilter;
 			productReference = 27B485D02E08A00A008C0B81 /* zaniaFilter.app */;
@@ -270,8 +250,6 @@
 			);
 			name = zaniaFilterExtension;
 			packageProductDependencies = (
-				27B486522E08B326008C0B81 /* Knob-iOS */,
-				27B486542E08B326008C0B81 /* Knob-macOS */,
 				27B486592E08B64C008C0B81 /* Controls */,
 			);
 			productName = zaniaFilterExtension;
@@ -855,22 +833,6 @@
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		27B4864E2E08B2FD008C0B81 /* Knob-iOS */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = "Knob-iOS";
-		};
-		27B486502E08B2FD008C0B81 /* Knob-macOS */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = "Knob-macOS";
-		};
-		27B486522E08B326008C0B81 /* Knob-iOS */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = "Knob-iOS";
-		};
-		27B486542E08B326008C0B81 /* Knob-macOS */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = "Knob-macOS";
-		};
 		27B486592E08B64C008C0B81 /* Controls */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Controls;
