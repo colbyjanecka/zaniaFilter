@@ -22,6 +22,7 @@
 class zaniaFilterExtensionDSPKernel {
 public:
     void initialize(int inputChannelCount, int outputChannelCount, double inSampleRate) {
+        mChannelCount = inputChannelCount;
         mSampleRate = inSampleRate;
     }
     
@@ -52,6 +53,12 @@ public:
             case zaniaFilterExtensionParameterAddress:: temp:
                 mTemp = value;
                 break;
+            case zaniaFilterExtensionParameterAddress:: cutoff:
+                mCutoff = cutoff;
+                break;
+            case zaniaFilterExtensionParameterAddress:: resonance:
+                mResonance = resonance;
+                break;
         }
     }
     
@@ -67,6 +74,10 @@ public:
                 return (AUValue) mPan;
             case zaniaFilterExtensionParameterAddress::temp:
                 return (AUValue) mTemp;
+            case zaniaFilterExtensionParameterAddress::cutoff:
+                return (AUValue) mCutoff;
+            case zaniaFilterExtensionParameterAddress::resonance:
+                return (AUValue) mResonance;
                 
             default: return 0.f;
         }
@@ -129,8 +140,18 @@ public:
                 if(channel == 1){ panMap = sin(panMap);
                 } else { panMap = cos(panMap); }
                 
+                //FIR Lowpass algorithm yn = axn-(1-a))xn-1
+                float currentFrame = inputBuffers[channel][frameIndex]; // get current frame
+                
+                float outputFrame = mTemp*currentFrame + (1-mTemp)*previousFrame[channel];  // add to previous frame and divide
+                
+                
                 // Do your sample by sample dsp here...
-                outputBuffers[channel][frameIndex] = inputBuffers[channel][frameIndex] * mGain/100 * panMap;
+                outputBuffers[channel][frameIndex] = outputFrame * mGain/100 * panMap;
+                //outputBuffers[channel][frameIndex] = inputBuffers[channel][frameIndex] * mGain/100 * panMap;
+                
+                
+                previousFrame[channel] = outputFrame; // store previous value
             }
         }
     }
@@ -155,10 +176,16 @@ public:
     AUHostMusicalContextBlock mMusicalContextBlock;
     
     double mSampleRate = 44100.0;
+    int nChannelCount = 1;
     double mGain = 25;
     double mAttack = 1.0;
     double mPan = 0;
     double mTemp = 0;
+    double mCutoff = 0;
+    double mResonance = 0;
     bool mBypassed = false;
     AUAudioFrameCount mMaxFramesToRender = 1024;
+    
+    float previousFrame[nChannelCount];
+
 };

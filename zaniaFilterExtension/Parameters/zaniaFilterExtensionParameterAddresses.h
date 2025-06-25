@@ -13,6 +13,8 @@ typedef NS_ENUM(AUParameterAddress, zaniaFilterExtensionParameterAddress) {
     gain = 0,
     attack,
     pan,
+    cutoff,
+    resonance,
     temp
 };
 

@@ -38,10 +38,39 @@ let zaniaFilterExtensionParameterSpecs = ParameterTreeSpec {
             address: .temp,
             identifier: "temp",
             name: "Temp",
-            units: .linearGain,
-            valueRange: 0.0...5.0,
+            units: .ratio,
+            valueRange: 0.0...1.0,
             defaultValue: 0
+        );
+        ParameterSpec(
+            address: .cutoff,
+            identifier: "cutoff",
+            name: "Cutoff",
+            units: .hertz,
+            valueRange: 12.0...20_000.0,
+            defaultValue: 20_000,
+            unitName: nil,
+            flags: [.flag_IsReadable,
+                    .flag_IsWritable,
+                    .flag_CanRamp],
+            valueStrings: nil,
+            dependentParameters: nil
+        );
+        ParameterSpec(
+            address: .resonance,
+            identifier: "resonance",
+            name: "Res",
+            units: .decibels,
+            valueRange: -20.0...20.0,
+            defaultValue: 0.0,
+            unitName: nil,
+            flags: [.flag_IsReadable,
+                    .flag_IsWritable,
+                    .flag_CanRamp],
+            valueStrings: nil,
+            dependentParameters: nil
         )
+        
     }
 }
 

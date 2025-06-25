@@ -21,6 +21,8 @@ struct zaniaFilterExtensionMainView: View {
             HStack{
                 ArcKnobView(param: parameterTree.global.gain)
                 ArcKnobView(param: parameterTree.global.pan)
+                ArcKnobView(param: parameterTree.global.cutoff)
+                ArcKnobView(param: parameterTree.global.temp)
             }
             
         }
