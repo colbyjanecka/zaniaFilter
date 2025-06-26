@@ -14,6 +14,7 @@
 #include <math.h>
 
 #import "zaniaFilterExtensionParameterAddresses.h"
+#include "zaniaVerb.h"
 
 /*
  zaniaFilterExtensionDSPKernel
@@ -59,6 +60,12 @@ public:
             case zaniaFilterExtensionParameterAddress:: resonance:
                 mResonance = resonance;
                 break;
+            case zaniaFilterExtensionParameterAddress:: delayTime:
+                mDelayTime = delayTime;
+                break;
+            case zaniaFilterExtensionParameterAddress:: decayFactor:
+                mDecayFactor = decayFactor;
+                break;
         }
     }
     
@@ -78,6 +85,10 @@ public:
                 return (AUValue) mCutoff;
             case zaniaFilterExtensionParameterAddress::resonance:
                 return (AUValue) mResonance;
+            case zaniaFilterExtensionParameterAddress::delayTime:
+                return (AUValue) mDelayTime;
+            case zaniaFilterExtensionParameterAddress::decayFactor:
+                return (AUValue) mDecayFactor;
                 
             default: return 0.f;
         }
@@ -145,6 +156,7 @@ public:
                 
                 float outputFrame = mTemp*currentFrame + (1-mTemp)*previousFrame[channel];  // add to previous frame and divide
                 
+                outputFrame = reverb.processFrame(outputFrame);
                 
                 // Do your sample by sample dsp here...
                 outputBuffers[channel][frameIndex] = outputFrame * mGain/100 * panMap;
@@ -176,7 +188,7 @@ public:
     AUHostMusicalContextBlock mMusicalContextBlock;
     
     double mSampleRate = 44100.0;
-    int nChannelCount = 1;
+    int mChannelCount = 1;
     double mGain = 25;
     double mAttack = 1.0;
     double mPan = 0;
@@ -186,6 +198,12 @@ public:
     bool mBypassed = false;
     AUAudioFrameCount mMaxFramesToRender = 1024;
     
-    float previousFrame[nChannelCount];
+    float previousFrame[2];
+    
+private:
+    
+    double mDecayFactor = 0.5;
+    int mDelayTime = 500;
+    ZaniaVerb reverb = ZaniaVerb(mDecayFactor, 500);
 
 };

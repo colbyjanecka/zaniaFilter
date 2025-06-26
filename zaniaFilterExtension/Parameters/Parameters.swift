@@ -35,14 +35,6 @@ let zaniaFilterExtensionParameterSpecs = ParameterTreeSpec {
             defaultValue: 0
         );
         ParameterSpec(
-            address: .temp,
-            identifier: "temp",
-            name: "Temp",
-            units: .ratio,
-            valueRange: 0.0...1.0,
-            defaultValue: 0
-        );
-        ParameterSpec(
             address: .cutoff,
             identifier: "cutoff",
             name: "Cutoff",
@@ -69,6 +61,30 @@ let zaniaFilterExtensionParameterSpecs = ParameterTreeSpec {
                     .flag_CanRamp],
             valueStrings: nil,
             dependentParameters: nil
+        );
+        ParameterSpec(
+            address: .temp,
+            identifier: "temp",
+            name: "Temp",
+            units: .ratio,
+            valueRange: 0.0...1.0,
+            defaultValue: 0
+        );
+        ParameterSpec(
+            address: .delayTime,
+            identifier: "delayTime",
+            name: "Delay",
+            units: .milliseconds,
+            valueRange: 0.0...10000.0,
+            defaultValue: 100
+        );
+        ParameterSpec(
+            address: .decayFactor,
+            identifier: "decayFactor",
+            name: "Decay",
+            units: .ratio,
+            valueRange: 0.0...1.0,
+            defaultValue: 0
         )
         
     }
