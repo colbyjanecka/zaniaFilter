@@ -14,14 +14,15 @@ struct ArcKnobView: View {
     var body: some View {
         GeometryReader { proxy in
             GroupBox(){
-                VStack(alignment: .leading, spacing: 40) {
+                VStack(alignment: .leading, spacing: 10) {
                     ArcKnob(param.displayName, value: $param.value, range: param.min...param.max, origin: param.value)
                         .backgroundColor(.accent)
                         .foregroundColor(.main)
                 }
             }
             .aspectRatio(1/1, contentMode: .fit)
+            .frame(minWidth: 50, maxWidth: .infinity, minHeight: 50, maxHeight: .infinity)
         }
-        .padding()
+        .padding(5)
     }
 }

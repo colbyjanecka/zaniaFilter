@@ -65,18 +65,18 @@ let zaniaFilterExtensionParameterSpecs = ParameterTreeSpec {
         ParameterSpec(
             address: .temp,
             identifier: "temp",
-            name: "Temp",
+            name: "Cutoff",
             units: .ratio,
             valueRange: 0.0...1.0,
-            defaultValue: 0
+            defaultValue: 0.5
         );
         ParameterSpec(
             address: .delayTime,
             identifier: "delayTime",
             name: "Delay",
             units: .milliseconds,
-            valueRange: 0.0...10000.0,
-            defaultValue: 100
+            valueRange: 0.0...1000.0,
+            defaultValue: 100.0
         );
         ParameterSpec(
             address: .decayFactor,
@@ -84,7 +84,7 @@ let zaniaFilterExtensionParameterSpecs = ParameterTreeSpec {
             name: "Decay",
             units: .ratio,
             valueRange: 0.0...1.0,
-            defaultValue: 0
+            defaultValue: 0.1
         )
         
     }

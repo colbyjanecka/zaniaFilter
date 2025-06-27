@@ -23,5 +23,7 @@ public:
     
     double processFrame(double frame);
 
+    void updateDecayFactor(double factor);
+    void updateDelayTime(int time);
     
 };

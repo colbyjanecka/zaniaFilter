@@ -38,3 +38,11 @@ double ZaniaVerb::processFrame(double frame){
     
     return output;
 }
+
+void ZaniaVerb::updateDecayFactor(double factor){
+    decayFactor = factor;
+}
+
+void ZaniaVerb::updateDelayTime(int time){
+    delayTime = time;
+}

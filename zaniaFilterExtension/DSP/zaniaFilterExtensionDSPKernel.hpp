@@ -62,9 +62,11 @@ public:
                 break;
             case zaniaFilterExtensionParameterAddress:: delayTime:
                 mDelayTime = delayTime;
+                reverb.updateDelayTime(delayTime);
                 break;
             case zaniaFilterExtensionParameterAddress:: decayFactor:
                 mDecayFactor = decayFactor;
+                reverb.updateDecayFactor(decayFactor);
                 break;
         }
     }
@@ -156,10 +158,10 @@ public:
                 
                 float outputFrame = mTemp*currentFrame + (1-mTemp)*previousFrame[channel];  // add to previous frame and divide
                 
-                outputFrame = reverb.processFrame(outputFrame);
+                double postReverb = reverb.processFrame(outputFrame);
                 
                 // Do your sample by sample dsp here...
-                outputBuffers[channel][frameIndex] = outputFrame * mGain/100 * panMap;
+                outputBuffers[channel][frameIndex] = postReverb * mGain/100 * panMap;
                 //outputBuffers[channel][frameIndex] = inputBuffers[channel][frameIndex] * mGain/100 * panMap;
                 
                 
@@ -192,9 +194,9 @@ public:
     double mGain = 25;
     double mAttack = 1.0;
     double mPan = 0;
-    double mTemp = 0;
-    double mCutoff = 0;
-    double mResonance = 0;
+    double mTemp = 0.5;
+    double mCutoff = 20000.0;
+    double mResonance = 0.0;
     bool mBypassed = false;
     AUAudioFrameCount mMaxFramesToRender = 1024;
     
@@ -202,8 +204,8 @@ public:
     
 private:
     
-    double mDecayFactor = 0.5;
-    int mDelayTime = 500;
-    ZaniaVerb reverb = ZaniaVerb(mDecayFactor, 500);
+    double mDecayFactor = 0.1;
+    int mDelayTime = 100;
+    ZaniaVerb reverb = ZaniaVerb(mDecayFactor, mDelayTime);
 
 };
