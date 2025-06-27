@@ -12,18 +12,18 @@ class ZaniaVerb
 {
 private:
     
-    double decayFactor;
-    int delayTime;
-    std::vector<double> delayBuffer;
+    double decay;
+    size_t index, delay;
+    std::vector<double> buffer;
     
 public:
     
     // initializer
-    ZaniaVerb(double decayFactor, int delayTime);
+    ZaniaVerb(double decayFactor, size_t maxDelay);
     
     double processFrame(double frame);
 
-    void updateDecayFactor(double factor);
-    void updateDelayTime(int time);
+    void setDecay(double factor);
+    void setDelay(size_t time);
     
 };

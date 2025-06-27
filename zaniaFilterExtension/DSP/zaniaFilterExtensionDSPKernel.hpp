@@ -55,18 +55,18 @@ public:
                 mTemp = value;
                 break;
             case zaniaFilterExtensionParameterAddress:: cutoff:
-                mCutoff = cutoff;
+                mCutoff = value;
                 break;
             case zaniaFilterExtensionParameterAddress:: resonance:
-                mResonance = resonance;
+                mResonance = value;
                 break;
             case zaniaFilterExtensionParameterAddress:: delayTime:
-                mDelayTime = delayTime;
-                reverb.updateDelayTime(delayTime);
+                mDelayTime = value;
+                reverb.setDelay(value);
                 break;
             case zaniaFilterExtensionParameterAddress:: decayFactor:
-                mDecayFactor = decayFactor;
-                reverb.updateDecayFactor(decayFactor);
+                mDecayFactor = value;
+                reverb.setDecay(value);
                 break;
         }
     }

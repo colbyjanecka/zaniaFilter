@@ -31,8 +31,8 @@ struct zaniaFilterExtensionMainView: View {
                 .foregroundColor(.main)
             ){
                 HStack{
-                    ArcKnobView(param: parameterTree.global.delayTime)
                     ArcKnobView(param: parameterTree.global.decayFactor)
+                    ArcKnobView(param: parameterTree.global.delayTime)
                 }
             }.aspectRatio(3/2, contentMode: .fit)
                 .frame(minWidth: containerWidth * 0.7, maxWidth: containerWidth, minHeight: 80, maxHeight: 300)

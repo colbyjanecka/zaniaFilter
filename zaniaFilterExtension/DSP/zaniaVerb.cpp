@@ -8,41 +8,60 @@
 #include "zaniaVerb.h" 
 #include <cmath>
 
-ZaniaVerb::ZaniaVerb(double decayFactor, int delayTime)
-    : decayFactor(decayFactor)
-    , delayTime(delayTime)
-{
-    // initialize buffer
-    delayBuffer.resize(delayTime, 0.0);
-}
+ZaniaVerb::ZaniaVerb(double decayFactor, size_t maxDelay)
+    : decay(decayFactor)
+    , delay(maxDelay)
+    , index(0)
+    , buffer(maxDelay, 0.0) {}
 
 // Function that actually processes the reverb effect by frame.
 double ZaniaVerb::processFrame(double frame){
     
-    // add new frame to delay buffer
-    delayBuffer.push_back(frame);
+    //get index of current buffer:
+    size_t readIndex = (index + buffer.size() - delay) % buffer.size();
     
-    // decay buffer values by decayFactor
-    for (int i = 0; i < delayBuffer.size(); ++i){
-        delayBuffer[i] *= decayFactor;
-    }
+    double delayedFrame = buffer[readIndex];
     
-    // sum buffer to get output frame
-    double output = 0.0;
-    for (int i = 0; i < delayBuffer.size(); ++i){
-        output += delayBuffer[i];
-    }
+    // add decay to delayed frame and combine with input
+    double output = frame + delayedFrame * decay;
     
-    // remove last sample of buffer
-    delayBuffer.erase(delayBuffer.begin());
+    // update current buffer slot with output frame
+    buffer[index] = output;
+    
+    index = (index + 1) % buffer.size();
     
     return output;
 }
 
-void ZaniaVerb::updateDecayFactor(double factor){
-    decayFactor = factor;
+/** c++
+class SimpleReverb {
+public:
+    SimpleReverb(size_t maxDelay, double decay)
+        : buffer(maxDelay, 0.0), decay(decay), index(0), delay(maxDelay) {}
+
+    double process(double input) {
+        size_t readIndex = (index + buffer.size() - delay) % buffer.size();
+        double delayed = buffer[readIndex];
+        double output = input + delayed * decay;
+        buffer[index] = output;
+        index = (index + 1) % buffer.size();
+        return output;
+    }
+
+    void setDelay(size_t d) { delay = std::min(d, buffer.size()); }
+    void setDecay(double d) { decay = d; }
+
+private:
+    std::vector<double> buffer;
+    size_t index, delay;
+    double decay;
+};
+**/
+
+void ZaniaVerb::setDecay(double factor){
+    decay = factor;
 }
 
-void ZaniaVerb::updateDelayTime(int time){
-    delayTime = time;
+void ZaniaVerb::setDelay(size_t time){
+    delay = std::min(time, buffer.size());
 }

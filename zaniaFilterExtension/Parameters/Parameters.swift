@@ -75,7 +75,7 @@ let zaniaFilterExtensionParameterSpecs = ParameterTreeSpec {
             identifier: "delayTime",
             name: "Delay",
             units: .milliseconds,
-            valueRange: 0.0...1000.0,
+            valueRange: 1...100000,
             defaultValue: 100.0
         );
         ParameterSpec(
