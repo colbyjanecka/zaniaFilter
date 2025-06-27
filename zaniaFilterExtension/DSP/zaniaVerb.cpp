@@ -8,11 +8,16 @@
 #include "zaniaVerb.h" 
 #include <cmath>
 
-ZaniaVerb::ZaniaVerb(double decayFactor, size_t maxDelay)
-    : decay(decayFactor)
+ZaniaVerb::ZaniaVerb(double decay, size_t maxDelay)
+    : decay(decay)
     , delay(maxDelay)
+    , prevInput(0.0), prevOutput(0.0)
     , index(0)
-    , buffer(maxDelay, 0.0) {}
+    , buffer(maxDelay, 0.0)
+    , filter1(80, 0.7)
+    , filter2(75, 0.3)
+    {}
+
 
 // Function that actually processes the reverb effect by frame.
 double ZaniaVerb::processFrame(double frame){
@@ -30,7 +35,10 @@ double ZaniaVerb::processFrame(double frame){
     
     index = (index + 1) % buffer.size();
     
-    return output;
+    double pass1 = filter1.process(output);
+    double pass2 = filter2.process(pass1);
+    
+    return pass2;
 }
 
 /** c++
@@ -59,9 +67,9 @@ private:
 **/
 
 void ZaniaVerb::setDecay(double factor){
-    decay = factor;
+    decay = std::clamp(factor, 0.01, 0.99);
 }
 
 void ZaniaVerb::setDelay(size_t time){
-    delay = std::min(time, buffer.size());
+    delay = std::clamp(time, size_t(1), buffer.size());
 }

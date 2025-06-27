@@ -25,6 +25,10 @@ public:
     void initialize(int inputChannelCount, int outputChannelCount, double inSampleRate) {
         mChannelCount = inputChannelCount;
         mSampleRate = inSampleRate;
+        reverbs.clear();
+        for (int i = 0; i < mChannelCount; ++i) {
+            reverbs.emplace_back(.5, 1024);
+        }
     }
     
     void deInitialize() {
@@ -62,11 +66,11 @@ public:
                 break;
             case zaniaFilterExtensionParameterAddress:: delayTime:
                 mDelayTime = value;
-                reverb.setDelay(value);
+                for (auto& r : reverbs) r.setDelay(value);
                 break;
-            case zaniaFilterExtensionParameterAddress:: decayFactor:
-                mDecayFactor = value;
-                reverb.setDecay(value);
+            case zaniaFilterExtensionParameterAddress:: decay:
+                mDecay = value;
+                for (auto& r : reverbs) r.setDecay(value);
                 break;
         }
     }
@@ -89,8 +93,8 @@ public:
                 return (AUValue) mResonance;
             case zaniaFilterExtensionParameterAddress::delayTime:
                 return (AUValue) mDelayTime;
-            case zaniaFilterExtensionParameterAddress::decayFactor:
-                return (AUValue) mDecayFactor;
+            case zaniaFilterExtensionParameterAddress::decay:
+                return (AUValue) mDecay;
                 
             default: return 0.f;
         }
@@ -153,15 +157,17 @@ public:
                 if(channel == 1){ panMap = sin(panMap);
                 } else { panMap = cos(panMap); }
                 
+                // get current frame
+                float currentFrame = inputBuffers[channel][frameIndex];
+                
                 //FIR Lowpass algorithm yn = axn-(1-a))xn-1
-                float currentFrame = inputBuffers[channel][frameIndex]; // get current frame
+                float postFilter = mTemp*currentFrame + (1-mTemp)*previousFrame[channel];  // add to previous frame and divide
                 
-                float outputFrame = mTemp*currentFrame + (1-mTemp)*previousFrame[channel];  // add to previous frame and divide
-                
-                double postReverb = reverb.processFrame(outputFrame);
+                // run reverb before low pass filter
+                double outputFrame = reverbs[channel].processFrame(postFilter);
                 
                 // Do your sample by sample dsp here...
-                outputBuffers[channel][frameIndex] = postReverb * mGain/100 * panMap;
+                outputBuffers[channel][frameIndex] = outputFrame * mGain/100 * panMap;
                 //outputBuffers[channel][frameIndex] = inputBuffers[channel][frameIndex] * mGain/100 * panMap;
                 
                 
@@ -204,8 +210,8 @@ public:
     
 private:
     
-    double mDecayFactor = 0.1;
-    int mDelayTime = 100;
-    ZaniaVerb reverb = ZaniaVerb(mDecayFactor, mDelayTime);
+    double mDecay = .5;
+    int mDelayTime = 1024;
+    std::vector<ZaniaVerb> reverbs;
 
 };

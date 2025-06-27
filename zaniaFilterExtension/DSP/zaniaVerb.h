@@ -7,19 +7,22 @@
 
 #include <vector>
 #include <cmath>
+#include "allPass.hpp"
 
 class ZaniaVerb
 {
 private:
     
     double decay;
+    double prevInput, prevOutput;
     size_t index, delay;
     std::vector<double> buffer;
+    AllPass filter1, filter2;
     
 public:
     
     // initializer
-    ZaniaVerb(double decayFactor, size_t maxDelay);
+    ZaniaVerb(double decay, size_t maxDelay);
     
     double processFrame(double frame);
 

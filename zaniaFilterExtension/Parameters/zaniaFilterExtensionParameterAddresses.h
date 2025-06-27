@@ -17,6 +17,6 @@ typedef NS_ENUM(AUParameterAddress, zaniaFilterExtensionParameterAddress) {
     resonance,
     temp,
     delayTime,
-    decayFactor
+    decay
 };
 

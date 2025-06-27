@@ -74,18 +74,30 @@ let zaniaFilterExtensionParameterSpecs = ParameterTreeSpec {
             address: .delayTime,
             identifier: "delayTime",
             name: "Delay",
-            units: .milliseconds,
-            valueRange: 1...100000,
-            defaultValue: 100.0
+            units: .sampleFrames,
+            valueRange: 1...176400,
+            defaultValue: 22050,
+            unitName: nil,
+            flags: [.flag_IsReadable,
+                    .flag_IsWritable,
+                    .flag_CanRamp],
+            valueStrings: nil,
+            dependentParameters: nil
         );
         ParameterSpec(
-            address: .decayFactor,
-            identifier: "decayFactor",
+            address: .decay,
+            identifier: "decay",
             name: "Decay",
             units: .ratio,
-            valueRange: 0.0...1.0,
-            defaultValue: 0.1
-        )
+            valueRange: 0.0...0.99,
+            defaultValue: 0.5,
+            unitName: nil,
+            flags: [.flag_IsReadable,
+                    .flag_IsWritable,
+                    .flag_CanRamp],
+            valueStrings: nil,
+            dependentParameters: nil
+        );
         
     }
 }
