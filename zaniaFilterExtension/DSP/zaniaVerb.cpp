@@ -14,8 +14,9 @@ ZaniaVerb::ZaniaVerb(double decay, size_t maxDelay)
     , prevInput(0.0), prevOutput(0.0)
     , index(0)
     , buffer(maxDelay, 0.0)
-    , filter1(80, 0.7)
-    , filter2(75, 0.3)
+    , filter1(113, 0.65)
+    , filter2(127, 0.7)
+    , filter3(149, 0.6)
     {}
 
 
@@ -27,9 +28,13 @@ double ZaniaVerb::processFrame(double frame){
     
     double delayedFrame = buffer[readIndex];
     
-    // add decay to delayed frame and combine with input
-    double output = frame + delayedFrame * decay;
+    // Simple one-pole low pass filter
+    const double alpha = 0.15; // Adjust 0.1–0.5 to taste
+    prevOutput = alpha * delayedFrame + (1.0 - alpha) * prevOutput;
     
+    // add decay to delayed frame and combine with input
+    double output = frame + prevOutput * decay;
+
     // update current buffer slot with output frame
     buffer[index] = output;
     
@@ -37,8 +42,9 @@ double ZaniaVerb::processFrame(double frame){
     
     double pass1 = filter1.process(output);
     double pass2 = filter2.process(pass1);
+    double pass3 = filter3.process(pass2);
     
-    return pass2;
+    return pass3;
 }
 
 /** c++
@@ -67,7 +73,7 @@ private:
 **/
 
 void ZaniaVerb::setDecay(double factor){
-    decay = std::clamp(factor, 0.01, 0.99);
+    decay = std::clamp(factor, 0.01, 0.90);
 }
 
 void ZaniaVerb::setDelay(size_t time){

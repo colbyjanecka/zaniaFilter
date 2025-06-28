@@ -27,7 +27,7 @@ public:
         mSampleRate = inSampleRate;
         reverbs.clear();
         for (int i = 0; i < mChannelCount; ++i) {
-            reverbs.emplace_back(.5, 1024);
+            reverbs.emplace_back(.5, 22050);
         }
     }
     
@@ -66,7 +66,7 @@ public:
                 break;
             case zaniaFilterExtensionParameterAddress:: delayTime:
                 mDelayTime = value;
-                for (auto& r : reverbs) r.setDelay(value);
+                for (auto& r : reverbs) r.setDelay(int(44.1*value));
                 break;
             case zaniaFilterExtensionParameterAddress:: decay:
                 mDecay = value;
@@ -160,18 +160,20 @@ public:
                 // get current frame
                 float currentFrame = inputBuffers[channel][frameIndex];
                 
-                //FIR Lowpass algorithm yn = axn-(1-a))xn-1
-                float postFilter = mTemp*currentFrame + (1-mTemp)*previousFrame[channel];  // add to previous frame and divide
-                
                 // run reverb before low pass filter
-                double outputFrame = reverbs[channel].processFrame(postFilter);
+                double postReverb = reverbs[channel].processFrame(currentFrame);
+                
+                //FIR Lowpass algorithm yn = axn-(1-a))xn-1
+                float postFilter = mTemp*postReverb + (1-mTemp)*previousFrame[channel];  // add to previous frame and divide
+                
+                float outputFrame = postFilter * mGain/100 * panMap;
                 
                 // Do your sample by sample dsp here...
-                outputBuffers[channel][frameIndex] = outputFrame * mGain/100 * panMap;
+                outputBuffers[channel][frameIndex] = outputFrame;
                 //outputBuffers[channel][frameIndex] = inputBuffers[channel][frameIndex] * mGain/100 * panMap;
                 
                 
-                previousFrame[channel] = outputFrame; // store previous value
+                previousFrame[channel] = postFilter; // store previous value
             }
         }
     }
@@ -210,8 +212,8 @@ public:
     
 private:
     
-    double mDecay = .5;
-    int mDelayTime = 1024;
+    double mDecay;
+    int mDelayTime;
     std::vector<ZaniaVerb> reverbs;
 
 };

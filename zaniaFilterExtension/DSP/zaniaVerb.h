@@ -17,7 +17,7 @@ private:
     double prevInput, prevOutput;
     size_t index, delay;
     std::vector<double> buffer;
-    AllPass filter1, filter2;
+    AllPass filter1, filter2, filter3;
     
 public:
     
